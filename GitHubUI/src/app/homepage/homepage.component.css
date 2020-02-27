@@ -1,0 +1,13 @@
+
+@media  (min-width: 0px) and (max-width: 640px) {
+    .highlightitcontent {
+      max-width: 100% !important;
+       }
+  
+	.responsiveheader{
+		display: none;
+	}
+	/* h4{
+		font-size: 20px !important;
+	} */
+  } 

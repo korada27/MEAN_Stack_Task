@@ -1,0 +1,26 @@
+
+<div>
+
+  <div class="cardscroll" fxFlex fxLayout="row wrap" fxLayoutAlign="center center" style="background:gray;">
+    <mat-card class="highlightitcontent" fxFlex="25" style="background:black;color:white;margin:3%;height:auto;"
+      *ngFor="let i of users">
+      <div><img class="imagezoom" src="{{i.avatar_url}}" onerror="this.onerror=null;this.src='https://www.quaero.com/wp-content/themes/seolounge/images/no-image/No-Image-Found-400x264.png';"
+          style="height:150px;width:100%;">
+      </div>
+
+      <hr>
+      <div fxLayout="row wrap" style="overflow-y: auto;height:auto;overflow-x:hidden">
+        <div>
+          <h4 style='color:orangered;font-family: monospace'><b> {{i.title}}</b> </h4>
+          <h5><b>User Name :</b> {{i.login}} </h5>
+          <h6 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">
+            <button (click)='gotoUser(i.login)'mat-button>Click Here.. for more Info</button>
+          </h6>
+       </div>
+      </div>
+    </mat-card><br>
+
+
+  </div>
+  
+</div>

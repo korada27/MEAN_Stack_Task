@@ -1,0 +1,38 @@
+<!-- <mat-card>Simple card</mat-card> -->
+
+<mat-card class="example-card">
+  <mat-card-header>
+    <div fxLayout="row" fxLayoutAlign="space-around center">
+      <div>
+        <img
+          mat-card-image
+          src="{{personDetails.avatar_url}}"
+          style="height: 20%;width: 20%;"
+        />
+      </div>
+      <div>
+        <p>
+          User Name : {{personDetails.name}}
+          Followers : {{personDetails.followers}}
+          Following : {{personDetails.following}}
+          Followers : {{personDetails.followers}}
+          Location : {{personDetails.location}}
+          Total Public Repos : {{personDetails.public_repos}}
+        </p>
+      </div>
+    </div>
+  </mat-card-header>
+
+ 
+  <mat-card-content>
+    <mat-list>
+    
+      <h3 mat-subheader>Respositories</h3>
+      <mat-list-item *ngFor="let p of personRepos">
+        <mat-icon mat-list-icon>folder</mat-icon>
+        <h4 mat-line>{{p.name}}</h4>
+        <p mat-line> {{p.description}} </p>
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+</mat-card>

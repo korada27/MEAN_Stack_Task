@@ -1,0 +1,21 @@
+<div>
+  
+  <form [formGroup]="myForm" (ngSubmit)="searchUser(myForm)" class="example-form" fxLayout="row" fxLayoutAlign="space-around center">
+    <div fxLayout="row" fxLayoutAlign="space-around center">
+      <mat-icon aria-hidden="false" aria-label="Example home icon" routerLink="/homepage">home</mat-icon>
+      <mat-form-field class="example-full-width">
+        
+        <input formControlName="name" matInput placeholder="Enter Username" />
+        <mat-hint>Enter User Name</mat-hint>
+      </mat-form-field>
+      
+    </div>
+ 
+    <div class="example-button-row">
+      <button mat-raised-button color="primary">Search</button>
+    </div>
+  </form>
+</div>
+<br />
+<br />
+<hr />
